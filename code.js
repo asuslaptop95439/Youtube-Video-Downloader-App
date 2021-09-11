@@ -2,10 +2,12 @@ const express = require("express");
 const ytdl = require("ytdl-core");
 const app = express();
 
+const port= process.env.PORT || 3000;
+
 app.use(express.json());
 app.use(express.static("public"));
 
-const port= process.env.PORT || 3000;
+
 
 
 app.get("/",function(request,response){
